@@ -1,0 +1,67 @@
+=========================================================================================
+               PROJECT DOCUMENTATION: ENTERPRISE SUPPLY CHAIN & LOGISTICS OPTIMIZATION
+=========================================================================================
+
+1. PROJECT OBJECTIVE & PROBLEM STATEMENT
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+The objective of this project is to build an end-to-end Executive Supply Chain Analytics platform for a global e-commerce enterprise handling 100,000+ annual orders. The management wants to optimize operations by identifying delivery bottlenecks, reducing high shipping costs, detecting product damage risks, and tracking warehouse inventory health to avoid stock-outs.
+
+The project answers critical business questions across three main categories:
+
+Page 1: Executive Financials & Shipping Cost Trends
+
+Page 2: Logistics Carrier SLAs, Delays, and Root-Cause Analysis
+
+Page 3: Warehouse Capacity, Inventory Risks, and Supplier Reliability
+
+
+2. KEY PERFORMANCE INDICATORS (KPIs) & BUSINESS LOGIC
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+To measure success, the dashboard implements the following corporate metrics via DAX:
+
+* On-Time Delivery (OTD %):
+  Formula = (Total On-Time Orders / Total Orders) * 100
+  Target Benchmark = 85% or higher.
+
+* Net Profit:
+  Formula = Revenue - (Item Cost + Shipping Cost)
+
+* Net Profit Margin %:
+  Formula = (Total Net Profit / Total Item Revenue) * 100
+
+* Product Damage Rate %:
+  Formula = (Count of Damaged Items / Total Orders Received) * 100
+
+* Order Return Rate %:
+  Formula = (Count of Returned Items / Total Orders Received) * 100
+
+
+3. DATA DICTIONARY (CRITICAL METRICS EXPLAINED)
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+The database contains 45 attributes. Below are the key operational definitions:
+
+OrderID: Unique transaction key for each customer order.
+
+IsDelayed (Yes/No): Flag identifying if Actual Delivery Time exceeded Expected Time.
+
+DelayReason: Root cause of delay (Severe Weather, Customs Delay, Traffic, etc.).
+
+IsDamaged (Yes/No): Flag indicating if the product was damaged during transit.
+
+ReturnStatus (Returned/None): Captures reverse logistics data for customer returns.
+
+WarehouseInventoryLevel: Current stock units available in the specific hub.
+
+SafetyStockLevel: Mini threshold req to prevent stockout. If Inventory < SafetyStock, it triggers a "HighRisk" alert.
+
+SupplierReliabilityScore: Quality rating of the manufacturer (Scale 0 to 1).
+
+
+4. ARCHITECTURE & TARGET AUDIENCE
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+Data Model: Star Schema Design (1 Fact Table, 5 Dimension Tables)
+
+Row Scale: 100,000+ transactional records.
+
+Audience: Chief Operations Officer (COO), Logistics Directors, Regional Warehouse Managers.
+=========================================================================================
