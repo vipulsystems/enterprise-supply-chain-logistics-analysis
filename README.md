@@ -303,8 +303,6 @@ enterprise-supply-chain-logistics-analysis/
 
 ### Vipul Paighan
 
-Data Analyst | Power BI Developer | SQL | Excel | Data Visualization
-
 Email: [vipul.paighan.in@gmail.com](mailto:vipul.paighan.in@gmail.com)
 
 GitHub: https://github.com/vipulsystems
