@@ -1,0 +1,45 @@
+# Power BI cache files
+*.tmp
+*.bak
+
+# Windows
+Thumbs.db
+Desktop.ini
+
+# MacOS
+.DS_Store
+
+# Power BI auto recovery
+*.pbix.autorecovery
+
+# Logs
+*.log
+
+# VS Code
+.vscode/
+
+# JetBrains
+.idea/
+
+# Python
+__pycache__/
+*.pyc
+
+# Temporary files
+temp/
+tmp/
+
+# Environment files
+.env
+.env.*
+
+# Backup files
+*.zip
+*.rar
+*.7z
+
+# Office temporary files
+~$*.xlsx
+~$*.xls
+~$*.docx
+~$*.pptx
